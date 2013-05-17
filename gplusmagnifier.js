@@ -22,19 +22,18 @@
         injectCSS('.Om { display: none !important;}');
     }
 
-    
-
     function cursorPosition(event)
     {
         posy = event.clientY;
-        if (posy > 100) {
+        var scpos = document.documentElement.scrollTop;
+        if ((scpos == 0) && (posy > 100)) {
             scroll(0, 102);
         }
     }
 
     function testScroll(event)
     {
-        sypos = document.documentElement.scrollTop;
+        var sypos = document.documentElement.scrollTop;
         if ((sypos == 0) && (posy > 100)) {
             scroll(0, 102);
         }
